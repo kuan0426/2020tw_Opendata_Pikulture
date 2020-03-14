@@ -11,3 +11,17 @@ import Flutter
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
+
+#include "AppDelegate.h"
+#include "GeneratedPluginRegistrant.h"
+#import "GoogleMaps/GoogleMaps.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [GMSServices provideAPIKey:@"AIzaSyCyaKsdgwujYmNFZugCHThJ5A4i1uB80_A"];
+  [GeneratedPluginRegistrant registerWithRegistry:self];
+  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+@end
